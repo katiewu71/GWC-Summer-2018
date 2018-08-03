@@ -12,17 +12,75 @@
   <ul>
     <li><a class="active" href="sprout.html">ABOUT US</a></li>
     <li><a href="funfactz.html" target="_blank">FUN FACTZ</a></li>
+    <li><a href="history.html" target="_blank">HISTORY</a></li>
+    <li><a href="jokes.html" target="_blank">JOKES</a></li>
   </ul>
 
-  <div class="sidenav">
-    <a href="#about">About</a>
-    <a href="#services">Services</a>
-    <a href="#clients">Clients</a>
-    <a href="#contact">Contact</a>
+  <h3>Pee Buddies!</h3>
+
+  <div class="slideshow-container">
+
+  <div class="mySlides fade">
+    <img src="peas.png" height="400" width="600">
   </div>
 
-  <div class="main">
-  <h3>Pee Buddies!</h3>
+  <div class="mySlides fade">
+    <img src="one.jpeg" height="400" width="600">
+  </div>
+
+  <div class="mySlides fade">
+    <img src="two.jpeg" height="400" width="600">
+  </div>
+
+  <div class="mySlides fade">
+    <img src="three.jpeg" height="400" width="600">
+  </div>
+
+  <div class="mySlides fade">
+    <img src="four.jpeg" height="400" width="600">
+  </div>
+
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+  </div>
+
+  <div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span>
+  <span class="dot" onclick="currentSlide(2)"></span>
+  <span class="dot" onclick="currentSlide(3)"></span>
+  <span class="dot" onclick="currentSlide(4)"></span>
+  <span class="dot" onclick="currentSlide(5)"></span>
+</div>
+
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+}
+</script>
 
   <div>
     <p>We are Grace and Katie. We met 3 weeks ago on the second day of the Girls Who Code program.
@@ -37,15 +95,6 @@
     </p>
   </div>
 
-  <h3>Etymology of the term "Pee Buddies"</h3>
-  <div id="col">
-  <p>After we began using the bathroom together, we established that our relationship status was "Pee Buddies."
-  <br>
-  <br>
-  We also began calling ourselves "Two Peas in a Pod," which made the term "Pee Buddies" even funnier.
-  <br>
-  <br>
-  </p>
 </div>
 </body>
 </html>
